@@ -7,10 +7,11 @@ transform = transforms.Compose([
     transforms.ToTensor()
 ])
 
-class BrainTumorDataset:
-    pass
+class BrainTumorDataset(datasets.ImageFolder):
+    def __init__(self, path):
+        super().__init__(path, transform=transform)
 
 def get_dataloader(path, shuffle=True):
-    dataset = datasets.ImageFolder(path, transform=transform)
+    dataset = BrainTumorDataset(path)
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
     return loader

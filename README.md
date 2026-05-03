@@ -14,8 +14,17 @@ CNNs automatically learn spatial image features such as edges, textures,
 and tumor shapes, making them highly effective for medical image classification.
 
 ## Dataset
-Brain Tumor MRI Dataset:
+
+The original dataset is not included in this repository due to size limitations.
+
+Download the Brain Tumor MRI Dataset from Kaggle:
 https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
+
+After downloading, place it in the following structure:
+
+dataset/
+├── Training/
+├── Testing/
 
 ## Installation
 pip install -r requirements.txt
